@@ -1,12 +1,648 @@
 body
   font-family: $font-base
   font-size: $font-size-base
-  //color: $color-text-base
+  color: $color-base
   height: 100%
 
 .wrap
   display: flex
   flex-direction: column
 .main
-  width: 1000px
+  max-width: 1200px
   margin: $margin_center
+
+//Header-top
+.header-top
+  background-color: #000000
+  +clearfix
+.top-header-left
+  float: left
+  line-height: 60px
+.top-social
+  font-size: 23px
+  color: #fff
+  margin-right: 30px
+  &:hover
+    color: #ec407a
+.top-header-right
+  float: right
+  line-height: 60px
+  +clearfix
+.top-cart
+  float: right
+  font-size: 16px
+  color: #fff
+  font-family: $comfortaa-bold
+  text-transform: $text-transform
+  margin-left: 20px
+  .top-cart__number
+    background-color: #ec407a
+    padding: 4px 8px
+  .fa-shopping-cart
+    font-size: 23px
+  &:hover
+    color: #ec407a
+    .top-cart__number
+      color: #fff
+    .fa-shopping-cart
+      color: #fff
+.top-reg
+  float: right
+  font-size: 16px
+  color: #fff
+  font-family: $comfortaa-bold
+  text-transform: $text-transform
+  &:hover
+    color: #ec407a
+//End header-top
+
+//Header-main
+.header-main
+  background: url("../images/banner-bg.jpg") no-repeat center
+  background-size: cover
+  height: 790px
+  padding: 70px 0
+  .main
+    +clearfix
+.main-header-logo
+  float: left
+.main-header-logo__image
+  margin-bottom: 20px
+.main-header-logo__phone
+  font-size: 24px
+  line-height: 28px
+  color: #fff
+  text-align: center
+  font-family: $comfortaa-bold
+.main-header-navigation
+  float: right
+.main-header-nav
+  line-height: 43px
+  ul
+    +clearfix
+    li
+      float: left
+.main-header-nav-link
+  padding: 12px
+  margin: 0 10px
+  color: #fff
+  font-size: 14px
+  line-height: 16px
+  text-transform: $text-transform
+  font-family: $comfortaa-bold
+  &:hover
+    background-color: #fff
+    color: #ec407a
+.main-header-nav-search
+  background-color: transparent
+  border: 1px solid #fff
+  font-size: 15px
+  color: #fff
+  padding: 12px
+.header-slider
+  clear: both
+.slider-block
+  width: 100%
+  height: 400px
+  justify-content: center
+  align-items: center
+  +flexbox
+.section-title
+  font-size: 60px
+  line-height: 62px
+  color: #fff
+  text-align: center
+  text-transform: $text-transform
+  font-family: $comfortaa-bold
+#mainSlider + .lSAction > a
+  width: 22px
+  height: 39px
+#mainSlider + .lSAction > .lSNext
+  background-position: -22px 0
+//drop brands
+//.link-male
+//  position: relative
+//.drop-block-male
+//  position: absolute
+//  left: 0
+//  top: 0
+//  height: 280px
+//  width: 100%
+//  background-color: #fff
+//  -webkit-column-count: 2
+//  -moz-column-count: 2
+//  column-count: 2
+//  -moz-column-width: 180px
+//  -webkit-column-width: 180px
+//  column-width: 180px
+//Emd drop brands
+//End header-main
+
+//Brands
+.brands
+  padding: 2px 0
+  +flexbox
+.brands-block
+  display: block
+  flex: 1
+  opacity: 0.5
+  border-top: 2px solid transparent
+  border-bottom: 2px solid transparent
+  &:hover
+    opacity: 1
+    border-top: 2px solid #c1c1c1
+    border-bottom: 2px solid #c1c1c1
+  img
+    width: 100%
+//end brands
+//Sale
+#saleSlider
+  height: 440px !important
+  padding: 0 8px
+.lSSlideOuter .lSPager li a
+  background-color: #c1c1c1 !important
+  +transition(none)
+.lSSlideOuter .lSPager li.active a
+  background-color: #ec407a !important
+  width: 12px !important
+  height: 12px !important
+.lSSlideOuter .lSPager li:hover a
+  background-color: #ec407a !important
+.sale
+  padding: 30px 0
+  background-color: #fff3fa
+.main-title
+  font-size: 28px
+  line-height: 30px
+  text-align: center
+  text-transform: $text-transform
+  font-family: $comfortaa-bold
+  margin-bottom: 60px
+  +transition(all 0.1s linear 0.1s)
+.item-block
+  width: 280px !important
+  height: 378px
+  margin-bottom: 42px
+  background-color: #fff
+  position: relative
+  z-index: 1
+  margin-top: 10px
+.item-block-image
+  height: 273px
+  width: 100%
+  overflow: hidden
+  img
+    width: 100%
+    height: 100%
+.item-block__title
+  text-align: center
+  font-size: 14px
+  line-height: 16px
+  padding: 20px 0
+  color: #333
+.item-block-wrap
+  margin-bottom: 15px
+.item-block-price
+  display: block
+  text-align: center
+  color: #ec407a
+  font-family: $comfortaa-bold
+.price-new
+  font-size: 16px
+  line-height: 18px
+.price-old
+  font-size: 14px
+  line-height: 16px
+  text-decoration: line-through
+.item-block-share
+  opacity: 0
+  position: absolute
+  left: 0
+  top: 0
+  font-size: 10px
+  line-height: 12px
+  padding: 12px
+  background-color: #ec407a
+  color: #fff
+  text-transform: $text-transform
+  +transition(all 0.1s linear 0.1s)
+.item-block-rate
+  opacity: 0
+  position: absolute
+  right: 5px
+  top: 5px
+  +transition(all 0.1s linear 0.1s)
+  .item-block-rate__star, .item-block-rate__star-o
+    color: #ec407a
+.item-block-icons
+  opacity: 0
+  padding-bottom: 15px
+  +transition(all 0.08s linear)
+  +transition(all 0.08s linear)
+.item-block-icons-block
+  width: 32%
+  text-align: center
+  display: inline-block
+  button
+    font-size: 23px
+    color: #c1c1c1
+    background-color: transparent
+    &:hover
+      color: #ec407a
+.item-block__link
+  opacity: 0
+  font-size: 12px
+  line-height: 14px
+  color: #fff
+  padding: 12px
+  background-color: rgba(236,64,122,0.5)
+  text-transform: $text-transform
+  font-family: $comfortaa-bold
+  position: absolute
+  left: 50%
+  margin-left: -75px
+  top: 150px
+  z-index: 10
+  +transition(all 0.1s linear 0.1s)
+  &:hover
+    background-color: rgba(236,64,122,1)
+.item-block:hover
+  height: 420px
+  margin-bottom: 0
+  +box-shadow(0px 0px 14px 2px #c0c0c0)
+  .item-block-share
+    opacity: 1
+  .item-block-rate
+    opacity: 1
+  .item-block__link
+    opacity: 1
+  .item-block-icons
+    opacity: 1
+//End Sale
+
+//Original
+.original
+  background: url("../images/original-bg.jpg") no-repeat center
+  background-size: cover
+  .section-title
+    width: 60%
+    margin: 0 auto
+.section-title-wrap
+  height: 500px
+  justify-content: center
+  align-items: center
+  +flexbox
+//End original
+
+//Novelty
+.novelty
+  padding: 30px 0
+  background-color: #fff3fa
+#noveltySlider
+  height: 440px !important
+  padding: 0 8px
+//End novelty
+
+//Shares
+.shares
+  background: url("../images/regular-bg.jpg") no-repeat center
+  background-size: cover
+  .section-title
+    width: 60%
+    margin: 0 auto
+//End shares
+
+//Reviews
+.reviews
+  padding: 30px 0
+  background-color: #fff3fa
+  .main
+    position: relative
+.reviews-wrap
+  flex-flow: row wrap
+  +flexbox
+.reviews-block
+  flex: 1
+  margin: 0 10px
+  clear: both
+.reviews-video img
+  width: 100%
+.reviews__title
+  font-size: 18px
+  line-height: 22px
+  text-transform: $text-transform
+  font-family: $comfortaa-bold
+  margin: 20px 0 10px
+.reviews__text
+  font-size: 14px
+  line-height: 18px
+  text-align: justify
+  font-family: $comfortaa-bold
+  margin-bottom: 20px
+.reviews-link
+  position: absolute
+  right: 10px
+  top: 0
+  font-size: 14px
+  line-height: 22px
+  text-transform: $text-transform
+  color: #ec407a
+//End reviews
+
+//Assortment
+.assortment
+  background: url("../images/regular-bg.jpg") no-repeat center
+  background-size: cover
+  .section-title
+    width: 60%
+    margin: 0 auto
+//End assortment
+
+//Seo
+.seo
+  padding: 30px 0
+  background-color: #fff3fa
+.seo-title
+  font-size: 20px
+  line-height: 22px
+  text-transform: $text-transform
+  font-family: $comfortaa-bold
+  text-align: center
+  margin-bottom: 30px
+.seo-sext
+  font-size: 16px
+  line-height: 18px
+  text-align: justify
+//End seo
+
+//Footer
+.footer
+  padding: 30px 0
+.footer-soc
+  text-align: center
+  margin-bottom: 30px
+.footer-social
+  margin: 0 50px
+  color: #c1c1c1
+  font-size: 50px
+  &:hover
+    color: #ec407a
+.footer-info
+  flex-flow: row wrap
+  +flexbox
+.footer-info-block
+  flex: 1
+  padding: 0 20px 10px
+.footer-info__title
+  font-size: 18px
+  line-height: 22px
+  text-transform: $text-transform
+  font-family: $comfortaa-bold
+  margin-bottom: 40px
+.footer-link
+  line-height: 24px
+  color: #ec407a
+  font-family: $comfortaa-bold
+  &:hover
+    color: #333
+//End footer
+
+//Second header
+.second-header
+  .header-main
+    background: #000
+    padding: 10px 0 20px
+    height: 100%
+  .main-header-logo__phone
+    font-size: 16px
+    margin-left: 15px
+  .main-header-navigation
+    margin-top: 30px
+//End second header
+
+////Page catalogue
+//Bread crumb
+.bread-crumb
+  background-color: #fff3fa
+.bread_crumb-block
+  margin-top: 30px
+  padding: 20px
+  border: 1px solid #333
+.bread_crumb-block__link
+  line-height: 16px
+  text-transform: $text-transform
+  font-family: $comfortaa-bold
+  color: #333
+  margin: 0 8px
+  &:hover
+    color: #ec407a
+.bread_crumb-block .bread_crumb-block__link:first-child
+  font-size: 18px
+//End bread crumb
+//Content
+.catalogue
+  background-color: #fff3fa
+  .main-title
+    margin: 60px 0
+.content
+  flex-flow: row wrap
+  +flexbox
+.filter
+  flex: 1
+  margin-right: 20px
+.filter-list
+  margin-bottom: 20px
+  select
+    width: 100%
+    background-color: transparent
+    border: 1px solid #cccccc
+    padding: 10px
+    color: #999999
+    font-size: 14px
+    line-height: 16px
+    font-family: $comfortaa-bold
+    cursor: pointer
+
+.content-block
+  flex: 3
+.description-block
+  margin-bottom: 30px
+  flex-flow: row wrap
+  +flexbox
+.catalogue-image
+  flex: 1
+  height: 374px
+  overflow: hidden
+  margin-right: 20px
+  img
+    width: 100%
+.catalogue-info
+  flex: 2
+  font-family: $comfortaa-bold
+  text-align: justify
+  font-size: 16px
+  line-height: 18px
+.catalogue-info__title
+  font-size: 20px
+  line-height: 22px
+  text-align: center
+  margin: 20px 0
+.catalogue-info__text
+  margin-bottom: 10px
+
+.content-filter
+  border: 2px solid #000
+  flex-flow: row wrap
+  +flexbox
+  +border-radius(3px)
+.content-filter-block-1
+  flex: 1
+  padding: 18px
+  font-size: 23px
+  text-align: center
+  border-right: 2px solid #000
+.content-filter-block-2
+  flex: 1
+  padding: 18px
+  font-size: 23px
+  text-align: center
+  border-right: 2px solid #000
+.content-filter-block-3
+  flex: 12
+  padding: 18px
+  border-right: 2px solid #000
+  #sorting
+    width: 100%
+    padding: 5px
+    border: none
+    background: transparent
+    color: #999
+    font-family: $comfortaa-bold
+.content-filter-block-4
+  flex: 3
+  padding: 18px
+  #show
+    width: 100%
+    padding: 5px
+    border: none
+    background: transparent
+    color: #999
+    font-family: $comfortaa-bold
+.content-product-block
+  margin-left: 20px
+  flex-flow: column wrap
+  +flexbox
+.content-product-block-row
+  flex-flow: row wrap
+  +flexbox
+.content-item-block
+  flex: 1
+  height: 378px
+  margin-bottom: 42px
+  background-color: #fff
+  position: relative
+  z-index: 1
+  margin-top: 10px
+  margin-right: 20px
+  &:hover
+    height: 420px
+    margin-bottom: 0
+    +box-shadow(0px 0px 14px 2px #c0c0c0)
+    .item-block-share
+      opacity: 1
+    .item-block-rate
+      opacity: 1
+    .item-block__link
+      opacity: 1
+    .item-block-icons
+      opacity: 1
+//End content
+//Product list
+.content-product-list
+  margin: 0 20px
+  flex-flow: column wrap
+  +flexbox
+.content-product-list-wrap
+  background-color: #fff
+  margin-bottom: 20px
+  flex-flow: row wrap
+  +flexbox
+.content-product-list-block
+  flex: 1
+  padding: 30px 0
+
+.list-image
+  height: 273px
+  overflow: hidden
+  margin-right: 20px
+  img
+    width: 100%
+
+.list-desc
+  margin-right: 10px
+.list-desc__title
+  font-size: 16px
+  line-height: 18px
+  font-family: $comfortaa-bold
+  padding: 0 9px 20px 0
+  border-right: 1px solid #000
+.list-desc__text
+  height: 100px
+  line-height: 17px
+  text-align: justify
+  overflow: hidden
+  margin-bottom: 10px
+  padding-right: 9px
+  border-right: 1px solid #000
+.list-desc-rate
+  font-size: 23px
+  color: #ec407a
+
+.list-info
+  .list-info-price
+    margin-bottom: 20px
+    .item-block-price
+      text-align: left
+.list-info-icons
+  button
+    background-color: transparent
+    margin-right: 20px
+    font-size: 23px
+    color: #c1c1c1
+    &:hover
+      color: #ec407a
+//End product list
+//Tabs
+
+//End tabs
+////End page catalogue
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
