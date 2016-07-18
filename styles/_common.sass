@@ -659,6 +659,133 @@ body
 
 //End brand page
 
+////Card_item page
+//Card-slider
+.card_item
+  padding-top: 60px
+  background-color: #fff3fa
+  .catalogue-info__title
+    margin: 0 0 30px
+    text-align: left
+  .catalogue-info__text
+    margin-bottom: 60px
+  .lSSlideWrapper
+    overflow: visible
+  .lSPager
+    padding: 50px 2px 50px 0
+    overflow: visible !important
+    li
+      height: 176px !important
+    li:first-child
+      margin-top: 8px !important
+    li.active
+      +box-shadow(0px 0px 5px 0px #ec407a)
+  .description-block
+    margin-bottom: 60px
+.cardSlider
+  img
+    width: 100%
+    height: 100%
+.cardSlider + .lSAction > a
+  width: 176px
+  height: 50px
+  background: url("../images/controls_card-slider.png") no-repeat
+  left: 100.5% !important
+  margin-left: 0 !important
+.cardSlider + .lSAction > .lSPrev
+  background-position: 0 0 !important
+  top: 0 !important
+.cardSlider + .lSAction > .lSNext
+  background-position: -176px 0 !important
+  bottom: 0 !important
+//End card-slider
+
+//Card-size-block
+.card-size-block
+  width: 100%
+  background-color: #fff
+  padding: 20px
+  margin-top: 20px
+  font-family: $comfortaa-bold
+  flex-flow: row wrap
+  +flexbox
+  .card-size-name
+    flex: 1
+    .item-block__title
+      text-align: left
+      padding: 0
+      line-height: 35px
+  .card-size-price
+    flex: 1
+    text-align: center
+    .item-block-price
+      display: inline-block
+      margin: 0 14px
+    .price-old
+      color: #999999
+    .card-size-price__share
+      display: block
+      font-size: 12px
+      line-height: 12px
+      margin-bottom: 5px
+  .item-block-icons
+    flex: 1
+    opacity: 1
+    padding-bottom: 0
+    line-height: 35px
+//End card-size-block
+
+//Card_options
+.card_options
+  margin-bottom: 30px
+  font-family: $comfortaa-bold
+.card_item__title
+  font-size: 18px
+  line-height: 20px
+  text-transform: $text-transform
+  text-align: center
+  margin-bottom: 30px
+.card_options-table
+  width: 100%
+  border-collapse: collapse
+  td
+    padding: 10px
+    border: 1px solid #333333
+.card_options-table__name
+  width: 32%
+  color: #999999
+.card_options-table__info
+  width: 68%
+//End card_options
+
+//Reviews
+.card-reviews-wrap
+  .lslide
+    height: 150px !important
+.card-reviews-arrows
+  position: absolute
+  top: 0
+  right: 0
+.card-reviews-block
+  margin-bottom: 30px
+  flex-flow: row wrap
+  +flexbox
+.card-reviews-author
+  flex: 1
+  font-family: $comfortaa-bold
+  margin-right: 20px
+.card-reviews-rate
+  color: #ec407a
+  margin-bottom: 10px
+.card-author__name
+  margin-bottom: 10px
+  text-transform: $text-transform
+.card-reviews-text
+  flex: 5
+  p
+    text-align: justify
+//End reviews
+////End card_item page
 
 
 
