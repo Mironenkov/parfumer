@@ -33,7 +33,7 @@
         vertical: true,
         slideMargin: 0,
         pager: false,
-        slideMove: 2,
+        slideMove: 1,
         verticalHeight: 300
     });
 })();
