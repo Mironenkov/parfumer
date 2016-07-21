@@ -36,4 +36,17 @@
         slideMove: 1,
         verticalHeight: 300
     });
+    $(".video_reviews-slider").lightSlider({
+        item: 3,
+        slideMargin: 20,
+        controls: false,
+        slideMove: 1
+    });
+    $(".similar-products-slider").lightSlider({
+        item: 3,
+        slideMargin: 20,
+        verticalHeight: 380,
+        controls: false,
+        slideMove: 1
+    });
 })();

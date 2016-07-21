@@ -10,7 +10,8 @@ body
 .main
   max-width: 1200px
   margin: $margin_center
-
+a:hover
+  text-decoration: none
 //Header-top
 .header-top
   background-color: #000000
@@ -93,12 +94,90 @@ body
   &:hover
     background-color: #fff
     color: #ec407a
+//Drop menu
+.drop-link
+  position: relative
+  &::after
+    content: ''
+    border-style: solid
+    border-width: 0 10px 14px 10px
+    border-color: transparent transparent #ffffff transparent
+    position: absolute
+    left: 50%
+    margin-left: -10px
+    top: -10000px
+    opacity: 0
+    +transition(opacity 0.2s linear)
+.drop-alphabet
+  opacity: 0
+  position: absolute
+  top: -1000px
+  left: -1000px
+  width: 1202px
+  border: 1px solid #000
+  border-top: 13px solid transparent
+.drop-letter
+  padding: 12px 16.5px
+  font-size: 20px
+  line-height: 20px
+  text-transform: uppercase
+  font-family: $comfortaa-bold
+  cursor: pointer
+  background-color: #fff
+  &:hover
+    color: #fff
+    background-color: #ec407a
+.drop-brand
+  //opacity: 0
+  width: 1200px
+  position: absolute
+  top: -1000px
+  left: -1000px
+  background-color: #fff
+  border: 1px solid #333
+  border-top: 1px solid #fff
+  z-index: 99999999
+.drop-brand_link
+  padding: 12px 13px
+  opacity: 0
+  +transition(opacity 0.3s linear)
+  a
+    color: #333
+    text-transform: none
+    &:hover
+      color: #ec407a
+.drop-link:hover
+  &::after
+    content: ''
+    top: 41px
+    opacity: 1
+  .drop-alphabet
+    opacity: 1
+    top: 42px
+    left: -569px
+    .drop-letter:hover
+      .drop-brand
+        opacity: 1
+        top: 44px
+        left: -1px
+        .drop-brand_link
+          opacity: 1
+.male:hover
+  .drop-alphabet
+    left: -666px
+.female:hover
+  .drop-alphabet
+    left: -784px
+//End drop menu
+
+
 .main-header-nav-search
   background-color: transparent
   border: 1px solid #fff
   font-size: 15px
   color: #fff
   padding: 12px
+  line-height: 16px
 .header-slider
   clear: both
 .slider-block
@@ -482,13 +561,14 @@ body
   text-align: justify
   font-size: 16px
   line-height: 18px
-.catalogue-info__title
+.content__title
   font-size: 20px
   line-height: 22px
   text-align: center
   margin: 20px 0
-.catalogue-info__text
+.content__text
   margin-bottom: 10px
+  text-align: justify
 
 .content-filter
   border: 2px solid #000
@@ -622,7 +702,7 @@ body
   background-color: #fff3fa
   .main-title
     margin: 60px 0
-  .catalogue-info__title
+  .content__title
     margin: 0 0 20px
 .brand-image
   flex: 1
@@ -662,12 +742,12 @@ body
 ////Card_item page
 //Card-slider
 .card_item
-  padding-top: 60px
+  padding: 60px 0
   background-color: #fff3fa
-  .catalogue-info__title
+  .content__title
     margin: 0 0 30px
     text-align: left
-  .catalogue-info__text
+  .content__text
     margin-bottom: 60px
   .lSSlideWrapper
     overflow: visible
@@ -802,10 +882,149 @@ body
   p
     text-align: justify
 //End reviews
+//Video-reviews
+.card-video_reviews-wrap
+  margin-bottom: 30px
+  .lSPager
+    height: 30px
+    li.active
+      +box-shadow(none)
+.card-video_review-video
+  height: 173px
+  overflow: hidden
+  margin-bottom: 15px
+  img
+    width: 100%
+    height: 100%
+.card-video_review__name
+  text-transform: $text-transform
+  font-family: $comfortaa-bold
+  margin-bottom: 10px
+.card-video_review__text
+  font-size: 12px
+  line-height: 14px
+  font-family: $comfortaa-bold
+  text-align: justify
+  height: 100px
+  overflow: hidden
+//End video-reviews
+//Form
+.card_item-form-wrap
+  margin-bottom: 60px
+  .reviews-link
+    top: -30px
+  .reviews-link:hover
+    text-decoration: none
+    color: #333
+.form-title-block
+  text-align: center
+  position: relative
+  margin-bottom: 40px
+.form-title
+  font-family: $comfortaa-bold
+  font-size: 16px
+  line-height: 18px
+  color: #cccccc
+  border-bottom: 1px solid #000
+  padding-bottom: 4px
+  position: relative
+  &::after
+    content: ''
+    border-style: solid
+    border-width: 8px 12.5px 0 12.5px
+    border-color: #000000 transparent transparent transparent
+    position: absolute
+    bottom: -9px
+    left: 50%
+    margin-left: -12.5px
+.form-input, .form-txtarea
+  border: 1px solid #cccccc
+  display: block
+  padding: 5px
+  background-color: transparent
+  width: 100%
+  font-family: $comfortaa-bold
+  margin-bottom: 20px
+.radio-rate:checked
+  background-color: #ec407a
+  padding: 10px
+.form-rating-block
+  +clearfix
+.rating
+  float: left
+  color: #cccccc
+  span
+    font-family: $comfortaa-bold
+    color: #333
+    margin-right: 10px
+.btn
+  font-family: $comfortaa-bold
+  text-transform: $text-transform
+  padding: 12px 14px
+  border: 2px solid #000
+  color: #000
+  background-color: transparent
+  float: right
+  &:hover
+    background-color: #ec407a
+    border: 2px solid #ec407a
+    color: #fff
+//End form
+//Slider similar-product
+.similar-products-slider
+  height: 440px !important
+  padding-left: 8px !important
+.similar-products-block .lSPager
+  height: 30px
+  li.active
+    +box-shadow(none)
+//End slider similar product
 ////End card_item page
 
+//Blog page
+.blog
+  background-color: #fff3fa
+  .main-title
+    margin: 60px 0
+  .block-nav_page
+    padding: 0
+.blog-block
+  margin-bottom: 30px
+  flex-flow: row wrap
+  +flexbox
+.blog-image
+  flex: 1
+  height: 374px
+  overflow: hidden
+  margin-right: 20px
+  img
+    width: 100%
+    height: 100%
+.blog-info
+  flex: 3
+.blog-content
+  height: 326px
+  overflow: hidden
+.blog-bot
+  color: #999999
+  font-family: $comfortaa-bold
+  +clearfix
+.blog-bot__numb-review
+  line-height: 48px
+//End blog page
 
-
+//Blog_article
+.blog_article-block
+  flex-flow: row wrap
+  +flexbox
+.blog_article-image
+  flex: 1
+  height: 643px
+  overflow: hidden
+  margin-right: 20px
+.blog_article-info
+  flex: 2
+//End blog_article
 
 
 
