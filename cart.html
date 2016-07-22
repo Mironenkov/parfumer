@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Блог</title>
+    <title>Корзина</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/font-awesome.min.css">
@@ -259,64 +259,95 @@
     <!-- Bread crumb -->
     <section class="bread-crumb">
         <div class="main">
-            <div class="bread_crumb-block"><a class="bread_crumb-block__link" href="#"><i class="fa fa-home" aria-hidden="true"></i></a><span><i class="fa fa-angle-right" aria-hidden="true"></i></span><a class="bread_crumb-block__link" href="#">Блог</a></div>
+            <div class="bread_crumb-block"><a class="bread_crumb-block__link" href="#"><i class="fa fa-home" aria-hidden="true"></i></a><span><i class="fa fa-angle-right" aria-hidden="true"></i></span><a class="bread_crumb-block__link" href="#">Корзина</a></div>
         </div>
     </section>
     <!-- Bread crumb -->
 
-    <!-- Blog -->
-    <section class="section blog">
+    <!-- Delivery -->
+    <section class="section cart">
         <div class="main">
-            <h2 class="main-title">Блог</h2>
-            <div class="blog-block">
-                <div class="blog-image">
-                    <img src="images/blog-img.jpg" alt="photo" width="273" height="374">
-                </div>
-                <div class="blog-info">
-                    <div class="blog-content">
-                        <h2 class="content__title">Нюансы поиска личного парфюма или как выбрать идеальные духи</h2>
-                        <p class="content__text">Духи могут одновременно быть средством самовыражения, наслаждения, обольщения, а порой и отвращения. Восприятие запахов крайне индивидуально. Любимый аромат, как правило, мы выбираем, руководствуясь не логикой, а интуицией, поэтому духи можно считать своеобразной визитной карточкой нашего скрытого Я. Как выбрать духи для себя любимой среди тысяч красивых флакончиков? Как не затеряться в дурманящем и пьянящем царстве ароматов?
-                        <br><br>
-                            В выборе личного аромата есть нечто волшебное и магическое, ведь, по сути, мы выбираем самих себя или то, какими мы хотим казаться.  мнению Эдмонда Рудничка, создателя таких бестеселлеров...
-                        </p>
-                    </div>
-                    <div class="blog-bot">
-                        <span class="blog-bot__numb-review">Отзывов (1)</span>
-                        <a class="btn" href="#">Читать далее</a>
-                    </div>
-
-                </div>
+            <h2 class="main-title">Корзина</h2>
+            <p class="content__text">Введите  номер сертификата на скидку: <span class="number-share"><input class="form-input" type="text"></span></p>
+            <div class="cart-title">
+                <div class="cart-item"></div>
+                <div class="cart-item"></div>
+                <div class="cart-item"></div>
+                <div class="cart-item"></div>
+                <div class="cart-item"></div>
+                <div class="cart-item"></div>
             </div>
-            <div class="blog-block">
-                <div class="blog-image">
-                    <img src="images/blog-img2.jpg" alt="photo" width="273" height="374">
-                </div>
-                <div class="blog-info">
-                    <div class="blog-content">
-                        <h2 class="content__title">Нюансы поиска личного парфюма или как выбрать идеальные духи</h2>
-                        <p class="content__text">Духи могут одновременно быть средством самовыражения, наслаждения, обольщения, а порой и отвращения. Восприятие запахов крайне индивидуально. Любимый аромат, как правило, мы выбираем, руководствуясь не логикой, а интуицией, поэтому духи можно считать своеобразной визитной карточкой нашего скрытого Я. Как выбрать духи для себя любимой среди тысяч красивых флакончиков? Как не затеряться в дурманящем и пьянящем царстве ароматов?
-                        <br><br>
-                            В выборе личного аромата есть нечто волшебное и магическое, ведь, по сути, мы выбираем самих себя или то, какими мы хотим казаться.  мнению Эдмонда Рудничка, создателя таких бестеселлеров...
-                        </p>
-                    </div>
-                    <div class="blog-bot">
-                        <span class="blog-bot__numb-review">Отзывов (1)</span>
-                        <a class="btn" href="#">Читать далее</a>
-                    </div>
-
-                </div>
+            <div class="cart-block">
+                <div class="cart-item"></div>
+                <div class="cart-item"></div>
+                <div class="cart-item"></div>
+                <div class="cart-item"></div>
+                <div class="cart-item"></div>
+                <div class="cart-item"></div>
             </div>
-            <div class="block-nav_page">
-                <div class="nav_page-left">
-                    <a class="nav_page-left__link" href="#">1</a><a class="nav_page-left__link" href="#">2</a><a class="nav_page-left__link" href="#"><i class="fa fa-angle-right" aria-hidden="true"></i></a><a class="nav_page-left__link" href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
-                </div>
-                <div class="nav_page-right">
-                    <span>Показаны 1-6 (из 9) результатов</span>
-                </div>
+            <table class="cart-table">
+                <tr class="cart-title">
+                    <td>Изображение</td>
+                    <td>Название, бренд</td>
+                    <td>Количество</td>
+                    <td>Цена</td>
+                    <td>Сумма</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr class="cart-block">
+                    <td><img src="images/card_img_thumb.jpg" alt="card"></td>
+                    <td>
+                        <p class="cart__title">Aqva-Amara Toilette-Spray Men (70 мл)</p>
+                        <p class="cart__brand">Bvlgari</p>
+                    </td>
+                    <td>
+                        <input class="cart-button minus" type="button">
+                        <input class="cart-input" type="text" value="1">
+                        <input class="cart-button plus" type="button">
+                    </td>
+                    <td>
+                        <span>1244 грн</span>
+                    </td>
+                    <td>
+                        <span>1244 грн</span>
+                    </td>
+                    <td>
+                        <span><i class="fa fa-trash" aria-hidden="true"></i></span>
+                    </td>
+                </tr>
+                <tr class="cart-block">
+                    <td><img src="images/card_img_thumb.jpg" alt="card"></td>
+                    <td>
+                        <p class="cart__title">Aqva-Amara Toilette-Spray Men (70 мл)</p>
+                        <p class="cart__brand">Bvlgari</p>
+                    </td>
+                    <td>
+                        <input class="cart-button minus" type="button">
+                        <input class="cart-input" type="text" value="1">
+                        <input class="cart-button plus" type="button">
+                    </td>
+                    <td>
+                        <span>1244 грн</span>
+                    </td>
+                    <td>
+                        <span>1244 грн</span>
+                    </td>
+                    <td>
+                        <span><i class="fa fa-trash" aria-hidden="true"></i></span>
+                    </td>
+                </tr>
+            </table>
+            <div class="cart-result">
+                <p class="content__title">Товары, отмеченные ***, недоступны в нужном количестве или их нет на складе!</p>
+                <p class="cart-summ">Итого: <span class="cart-summ__price">1244 грн</span></p>
+            </div>
+            <div class="blog-bot">
+                <a class="btn blog-bot-left" href="#">Продолжить покупки</a>
+                <a class="btn" href="#">Оформить заказ</a>
             </div>
         </div>
     </section>
-    <!-- End blog -->
+    <!-- End delivery -->
 
     <!-- Footer -->
     <footer class="footer">
